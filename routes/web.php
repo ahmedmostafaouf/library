@@ -14,14 +14,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('content');
+    return view('welcome');
 });
-Route::get('creat-post','App\Http\Controllers\Admin\PostController@creatPost')->name('get.create');
-Route::post('create','App\Http\Controllers\Admin\PostController@create')->name('create');
-Route::get('index','App\Http\Controllers\Admin\PostController@showAllPosts')->name('show');
-Route::get('home','App\Http\Controllers\Admin\PostController@home')->name('home');
-Route::get('contact','App\Http\Controllers\Admin\PostController@contact')->name('contact');
+Route::group(['prefix'=>'Post'],function () {
+    Route::get('creat-post', 'App\Http\Controllers\Admin\PostController@creatPost')->name('get.create');
+    Route::post('create', 'App\Http\Controllers\Admin\PostController@create')->name('create');
+    Route::get('index', 'App\Http\Controllers\Admin\PostController@showAllPosts')->name('show');
+    Route::get('home', 'App\Http\Controllers\Admin\PostController@home')->name('home');
+    Route::get('contact', 'App\Http\Controllers\Admin\PostController@contact')->name('contact');
+    Route::get('editPost/{id}', 'App\Http\Controllers\Admin\PostController@edit')->name('edit.post');
+    Route::post('updatePost{id}', 'App\Http\Controllers\Admin\PostController@update')->name('update.post');
+    Route::get('deletePost/{id}', 'App\Http\Controllers\Admin\PostController@delete')->name('delete.post');
+    Route::get('showPost/{id}', 'App\Http\Controllers\Admin\PostController@showPost')->name('show.post');
 
+});
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');

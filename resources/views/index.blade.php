@@ -38,6 +38,9 @@
                                 <th>#</th>
                                 <th>Title</th>
                                 <th>Body</th>
+                                <th>Edit</th>
+                                <th>Show</th>
+                                <th>Delete</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -47,8 +50,10 @@
 
                                     <td>{{$index +1 }}</td>
                                     <td>{{$post ->title}}</td>
-                                    <td>{{$post->body}}
-                                    </td>
+                                    <td>{{$post->body}}</td>
+                                    <td><a href="{{route('edit.post',$post->id)}}" class="btn btn-primary">Edit</a></td>
+                                    <td><a href="{{route('show.post',$post->id)}}" class="btn btn-success ">show</a></td>
+                                    <td><a href="{{route('delete.post',$post->id)}}" class="btn btn-danger">Delete</a></td>
                             </tr>
 
 
