@@ -36,7 +36,6 @@
                         <tr>
                             <th>#</th>
                             <th>Name</th>
-                            <th>Photo</th>
                             <th>Email</th>
                             <th>Address</th>
                             <th>Date Of Barth</th>
@@ -46,12 +45,10 @@
                         </thead>
                         <tbody>
                         <tr>
-
                             @foreach($students as $index=> $student)
 
                             <td>{{$index +1 }}</td>
                             <td>{{$student ->name}}</td>
-                            <td>{{$student ->photo}}</td>
                             <td>{{$student ->email}}</td>
                             <td>{{$student ->address}}</td>
                             <td>{{$student ->dop}}</td>
@@ -70,13 +67,9 @@
 
                                 </td>
                         </tr>
-
-
                         @endforeach
-
                         </tbody>
                     </table>
-                    {{$students->appends(request()->query())->links()}}
                     @else
                         <h2>data not found</h2>
                     @endif

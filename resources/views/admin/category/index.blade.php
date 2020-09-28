@@ -74,7 +74,6 @@
 
                         </tbody>
                     </table>
-                    {{$categories->appends(request()->query())->links()}}
                     @else
                         <h2>data not found</h2>
                     @endif

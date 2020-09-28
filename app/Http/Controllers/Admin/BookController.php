@@ -15,9 +15,12 @@ class BookController extends Controller
     use General;
 
 
-    public function index()
+    public function index(Request $request)
     {
-        $books=Book::paginate('20');
+        $books=Book::where(function ($q) use($request){
+            if($request->input('search')||$request->input('category_id')){
+                return $q ->where('name','like','%'.$request->search.'%')->orwhere('category_id',$request->category_id);
+            }})->get();;
         return view('admin.book.index',compact('books'));
     }
 

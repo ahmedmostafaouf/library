@@ -95,13 +95,9 @@
                                     <a href="{{route('book.status',$book->id)}}" class="btn btn-success btn-circle btn-lg">@if($book->found==1)<i class="fas fa-check"></i>@else <i class="fas fa-times"></i> @endif </a>
                                 </td>
                         </tr>
-
-
                         @endforeach
-
                         </tbody>
                     </table>
-                    {{$books->appends(request()->query())->links()}}
                     @else
                         <h2>data not found</h2>
                     @endif

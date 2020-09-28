@@ -16,7 +16,7 @@ class StudentController extends Controller
         $students=User::where(function ($q) use($request){
             if($request->input('search')){
                 return $q ->where('name','like','%'.$request->search.'%');
-            }})->paginate('5');
+            }})->get();
         return view('admin.student.index',compact('students'));
     }
 
