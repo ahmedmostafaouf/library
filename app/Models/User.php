@@ -26,7 +26,18 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'photo',
+        'address',
+        'dop',
+        'phone'
     ];
+    public function borrowRequests(){
+        return $this->hasMany('App\Models\BorrowRequest');
+    }
+
+    public function books(){
+        return $this ->hasMany('App\Models\Book');
+    }
 
     /**
      * The attributes that should be hidden for arrays.
