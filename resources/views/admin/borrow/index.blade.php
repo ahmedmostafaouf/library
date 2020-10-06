@@ -73,7 +73,7 @@
                             @foreach($borrowRequests as $index=> $borrowRequest)
 
                             <td>{{$index +1 }}</td>
-                            <td>{{$borrowRequest ->number_of_days}}</td>
+                            <td>{{(strtotime($borrowRequest->Too) - strtotime($borrowRequest ->created_at->format('Y-m-d')))/60/60/24}}</td>
                             <td>{{$borrowRequest ->created_at->format('Y-m-d')}}</td>
                             <td>{{$borrowRequest ->Too}}</td>
                             <td>{{$borrowRequest ->book->name}}</td>

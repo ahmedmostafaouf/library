@@ -20,14 +20,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e061d131-baae-4a8a-91cc-6906e89a75ea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/assests/front/imgs/logo2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assests/front/imgs/logo4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assests/front/imgs/logo6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assests/front/imgs/logo7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assests/images/books/1601724354.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/BookController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/BookController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/StudentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/StudentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/book/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/book/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/BorrowRequestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/BorrowRequestController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Front/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Front/MainController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/BorrowRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/BorrowRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_26_223520_create_borrow_requests_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_26_223520_create_borrow_requests_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/book/showStudentReq.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/book/showStudentReq.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/borrow/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/borrow/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/category/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/student/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/student/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/about.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/books.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/books.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/booksDetails.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/booksDetails.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/borrow.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/borrow.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/changePass.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/changePass.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/contact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/includes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/includes/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/includes/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/studentBorrowBook.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/studentBorrowBook.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +193,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/front" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assests/front/imgs" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -187,17 +204,17 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\blogme\resources\views\front" />
-      <recent name="C:\xampp\htdocs\blogme\resources\views\admin" />
-      <recent name="C:\xampp\htdocs\blogme\resources\views\admin\book" />
-      <recent name="C:\xampp\htdocs\blogme\app\Http\Controllers\Auth" />
-      <recent name="C:\xampp\htdocs\blogme\resources\views\layouts" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\blogme\resources\views\admin\student" />
       <recent name="C:\xampp\htdocs\blogme\resources\views\admin\auth" />
       <recent name="$PROJECT_DIR$/resources/views/admin/include" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\blogme\public\assests\front\imgs" />
+      <recent name="C:\xampp\htdocs\blogme\resources\views\front" />
+      <recent name="C:\xampp\htdocs\blogme\resources\views\admin" />
+      <recent name="C:\xampp\htdocs\blogme\resources\views\admin\book" />
+      <recent name="C:\xampp\htdocs\blogme\app\Http\Controllers\Auth" />
     </key>
   </component>
   <component name="RunManager">
@@ -225,6 +242,8 @@
       <workItem from="1601051589569" duration="23788000" />
       <workItem from="1601210495186" duration="61157000" />
       <workItem from="1601330695798" duration="3019000" />
+      <workItem from="1601723401501" duration="1069000" />
+      <workItem from="1601900158405" duration="19715000" />
     </task>
     <servers />
   </component>
@@ -271,10 +290,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1601296742008" />
-    <state x="346" y="52" width="672" height="675" key="search.everywhere.popup" timestamp="1601216543995">
+    <state x="346" y="52" width="672" height="675" key="search.everywhere.popup" timestamp="1601925192714">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="52" width="672" height="675" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1601216543995" />
+    <state x="346" y="52" width="672" height="675" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1601925192714" />
     <state x="346" y="52" width="672" height="678" key="search.everywhere.popup/0.0.1366.732@0.0.1366.732" timestamp="1599865451484" />
   </component>
 </project>

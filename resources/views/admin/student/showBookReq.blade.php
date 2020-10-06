@@ -24,6 +24,7 @@
                             <th>#</th>
                             <th>Name Of Book</th>
                             <th>Borrow Date</th>
+                            <th>Borrowing time (days)</th>
                             <th>Accept</th>
                         </tr>
                         </thead>
@@ -33,6 +34,8 @@
                             <td>{{$index +1 }}</td>
                             <td>{{$student ->book_name}}</td>
                                 <td>{{$student ->created_at->format('Y-m-d')}}</td>
+                                <td> {{(strtotime($student->Too) - strtotime($student ->created_at->format('Y-m-d')))/60/60/24}}</td>
+
                                 <td>{{$student ->getStatus()}}</td>
                         </tr>
                         @endforeach

@@ -5,8 +5,8 @@
         <!--Breadcrumb-->
         <nav class="my-4" aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">الرئيسيه</a></li>
-                <li class="breadcrumb-item active" aria-current="page">"طلب استعارة"</li>
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Borrow Request</li>
             </ol>
         </nav><!--End Breadcrumb-->
     </div><!--End container-->
@@ -15,66 +15,44 @@
         @include('admin.include.alerts.success')
         <div class="container">
             <div class="py-4 mb-4">
-        <form action="{{route('push-borrow-request')}}" method="POST" class="w-75 m-auto">
+                <div class="text-center"><img src="{{asset('assests/front/imgs/logo6.png')}}"></div> <br> <br>
+                <form action="{{route('push-borrow-request')}}" method="POST" class="w-75 m-auto">
             @csrf
-            <input type="text"  hidden name="book_name" value="{{$books->name}}" class="form-control my-3" placeholder="اسم الكتاب">
-
+                    <input type="text"  id="datepicker" hidden disabled name="user_id" value="{{auth()->user()->id}}" class="form-control">
+                    <input type="text" name="book_id" hidden value="{{$books->id}}" class="form-control my-3" placeholder="book_id">
+                    <input type="text"  hidden name="book_name" value="{{$books->name}}" class="form-control my-3" placeholder="Book name">
             <div class="form-group">
-                <label>عدد ايام الاستعارة</label>
-                <input type="text" name="number_of_days" class="form-control my-3" placeholder="عدد ايام الاستعارة">
-                @error("number_of_days")
-                <span class="text-danger">{{$message}} </span>
-                @enderror
-            </div>
-            <div class="form-group">
-                <label>الوقت التى يتم استرجاع فيه الكتاب</label>
-                <input type="date" name="Too" class="form-control my-3" placeholder="الوقت التى يتم استرجاع فيه الكتاب">
+                <label>The time the book is retrieved</label>
+                <input type="date" name="Too" class="form-control my-3" placeholder="The time the book is retrieved">
                 @error("Too")
                 <span class="text-danger">{{$message}} </span>
                 @enderror
             </div>
             <div class="form-group">
-                <label>اسم الكتاب</label>
-                <input type="text"  disabled name="books_name" value="{{$books->name}}" class="form-control my-3" placeholder="اسم الكتاب">
+                <label>Book Name</label>
+                <input type="text"  disabled name="books_name" value="{{$books->name}}" class="form-control my-3" placeholder="book Name">
                 @error("book_name")
                 <span class="text-danger">{{$message}} </span>
                 @enderror
             </div>
             <div class="form-group">
                 <div class="form-group">
-                    <label>اسم الطالب</label>
-                    <input type="text"  id="datepicker" disabled name="user_name" value="{{auth()->user()->name}}" class="form-control" placeholder="تاريخ الميلاد">
+                    <label>Student Name</label>
+                    <input type="text"  id="datepicker" disabled name="user_name" value="{{auth()->user()->name}}" class="form-control" placeholder="Student name">
                 </div>
             </div>
             <div class="form-group">
-                <div class="form-group">
-                    <input type="text"  id="datepicker" hidden disabled name="user_id" value="{{auth()->user()->id}}" class="form-control" placeholder="تاريخ الميلاد">
-
-                </div>
+                <label>Phone</label>
+                <input type="text" name="phone" value="{{auth()->user()->phone}}" disabled class="form-control " placeholder="Phone">
             </div>
-
-            <div class="form-group">
-                <label>رقم الهاتف</label>
-                <input type="text" name="phone" value="{{auth()->user()->phone}}" disabled class="form-control " placeholder="رقم الهاتف">
-            </div>
-                <label>العنوان</label>
-                <input type="text" disabled id="datepicker" name="address" value="{{auth()->user()->address}}" class="form-control" placeholder="العنوان">
+                <label>Address</label>
+                <input type="text" disabled id="datepicker" name="address" value="{{auth()->user()->address}}" class="form-control" placeholder="Address">
                 @error("address")
                 <span class="text-danger">{{$message}} </span>
                 @enderror
             </div>
             <div class="form-group">
-                <div class="input-group">
-                <input type="text" name="book_id" hidden value="{{$books->id}}" class="form-control my-3" placeholder="كلمة المرور">
-                <div class="input-group">
-                    @error("password")
-                    <span class="text-danger">{{$message}} </span>
-                    @enderror
-                </div>
-                </div>
-            </div>
-            <div class="form-group">
-            <button type="submit" class="btn btn-success py-2 w-50">ارسال</button>
+                <button type="submit" class="btn btn-success py-2 w-50">Send</button>
             </div>
         </form>
             </div>

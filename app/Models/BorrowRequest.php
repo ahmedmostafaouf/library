@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class BorrowRequest extends Model
 {
     use HasFactory;
-    protected $fillable=['id','number_of_days','book_name','user_name','status','user_id','Too','book_id'];
+    protected $fillable=['id','book_name','user_name','status','user_id','Too','book_id'];
     public function user(){
         return $this->belongsTo('App\Models\User');
     }

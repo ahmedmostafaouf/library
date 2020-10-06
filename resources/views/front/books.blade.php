@@ -6,8 +6,8 @@
         <!--Breadcrumb-->
         <nav class="my-5" aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{route('client-home')}}">الرئيسيه</a></li>
-                <li class="breadcrumb-item">الكتب</li>
+                <li class="breadcrumb-item"><a href="{{route('client-home')}}">Home</a></li>
+                <li class="breadcrumb-item">Books</li>
 
             </ol>
         </nav><!--End Breadcrumb-->
@@ -15,14 +15,14 @@
 
     <!--Articles section-->
     <section class="articles mb-5">
-        <div class="title">
+        <div class="arrow text-left">
             <div class="container">
-                <h5><span class="py-1">قائمة الكتب</span></h5>
+                <h5><span class="py-1 arrow text-left">List of books</span></h5>
             </div>
         </div>
         <div class="article-slide mt-3">
             <div class="container">
-                <div class="arrow text-left">
+                <div class="arrow text-right">
                     <button type="button" class="prev-arrow px-2 py-1"><i class="fas fa-chevron-right"></i></button>
                     <button type="button" class="next-arrow px-2 py-1"><i class="fas fa-chevron-left"></i></button>
                 </div>
@@ -39,7 +39,7 @@
                                     <p>{{mb_substr($book ->description,0,20)}} ......
                                     </p>
                                     <div class="text-center"><a href="{{route('details-books' ,$book->id)}}"
-                                                                class="btn bg px-5">التفاصيل</a></div>
+                                                                class="btn bg px-5">Details</a></div>
                                 </div>
                             </div>
                         </div>

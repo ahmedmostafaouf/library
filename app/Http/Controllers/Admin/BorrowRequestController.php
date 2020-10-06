@@ -42,16 +42,16 @@ class BorrowRequestController extends Controller
             }
             if ($borrowBooks->status == 1) {
                 $borrowBooks->update([
-                    'status' => 0
+                    'status' => 0,
                 ]);
-
                 return redirect()->route('borrowRequest.index')->with(['success' => "Change Successfully"]);
             }
             if ($borrowBooks->status == 0) {
                 $borrowBooks->update([
-                    'status' => 1
+                    'status' => 1,
                 ]);
                 return redirect()->route('borrowRequest.index')->with(['success' => "Change Successfully"]);
+
             }
 
         } catch (\Exception $ex) {

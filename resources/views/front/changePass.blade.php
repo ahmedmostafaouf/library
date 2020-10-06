@@ -6,9 +6,9 @@
         <!--Breadcrumb-->
         <nav class="my-5" aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{route('client-home')}}">الرئيسيه</a></li>
-                <li class="breadcrumb-item"><a href="{{route('get.student.profile')}}">الملف الشخصى</a></li>
-                <li class="breadcrumb-item active" aria-current="page">معلومات  عن : {{auth()->user()->name}}</li>
+                <li class="breadcrumb-item"><a href="{{route('client-home')}}">Home</a></li>
+                <li class="breadcrumb-item"><a href="{{route('get.student.profile')}}">Edit Password </a></li>
+                <li class="breadcrumb-item active" aria-current="page"> {{auth()->user()->name}} : Information Details  </li>
             </ol>
         </nav><!--End Breadcrumb-->
         <section class="Status-details">
@@ -23,21 +23,21 @@
                                 @include('admin.include.alerts.errors')
                                 @include('admin.include.alerts.success')
                                 <div class="form-group">
-                                    <label>كلمة المرور القديمة  </label>
+                                    <label>Current Password  </label>
                                     <input class="form-control" type="password"  name="oldPassword" >
                                     @error("oldPassword")
                                     <span class="text-danger">{{$message}} </span>
                                     @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label>كلمة المرور الجديدة </label>
+                                    <label>New Password </label>
                                     <input type="password" name="newPassword" class="form-control">
                                     @error("newPassword")
                                     <span class="text-danger">{{$message}} </span>
                                     @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label >تأكيد كلمه المرور</label>
+                                    <label >Retype the password</label>
                                     <input type="password"   name="newPassword_confirmation"  class="form-control">
                                     <div class="input-group">
                                         @error("newPassword_confirmation")
@@ -46,7 +46,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-success form-control">تعديل كلمة المرور</button>
+                                    <button type="submit" class="btn btn-success form-control">Edit Password</button>
                                 </div>
                             </form>
                         </div>

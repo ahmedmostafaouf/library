@@ -41,7 +41,7 @@ class MainController extends Controller
             ]);
             return redirect()->route('client-home')->with(['success'=>"BorrowsRequest Success"]);
         }catch (\Exception $ex){
-          return 'error';
+          return $ex;
         }
 
     }
@@ -64,7 +64,7 @@ class MainController extends Controller
             $student->update($request->all());
             return redirect()->route('get.student.profile')->with(['success'=>'Edit Successfully']);
         }catch (\Exception $ex){
-            return redirect()->route('get.student.profile')->with(['error'=>'Something Wring']);
+            return redirect()->route('get.student.profile')->with(['error'=>'Something Wrong']);
         }
 
 
@@ -74,10 +74,10 @@ class MainController extends Controller
     }
     public function editPass(Request $request){
         if(!(Hash::check($request->get('oldPassword'),auth()->user()->password))){
-            return redirect()->route('get.student.EditPass')->with(['error'=>'كلمه السر القديمه حطأ']);
+            return redirect()->route('get.student.EditPass')->with(['error'=>'Current Password Is Wrong']);
         }
         if(strcmp($request->get('oldPassword'),$request->get('newPassword'))==0){
-            return redirect()->route('get.student.EditPass')->with(['error'=>'لايجوز ان تكون كلمه السر الجديد تساوي كلمه السر القديمه']);
+            return redirect()->route('get.student.EditPass')->with(['error'=>'The new password may not be equal to the current password']);
         }
         $validatedData = $request->validate([
             'oldPassword' => 'required',
@@ -87,7 +87,7 @@ class MainController extends Controller
         $request_data=$request->except(['password']);
         $request_data['password']=bcrypt($request->newPassword);
         $user->update($request_data);
-        return redirect()->route('get.student.EditPass')->with(['success'=>'تم التحديث بنجاح']);
+        return redirect()->route('get.student.EditPass')->with(['success'=>'Update Successful']);
 
     }
     public function about(){

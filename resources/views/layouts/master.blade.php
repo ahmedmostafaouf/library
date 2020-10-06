@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,7 @@
     <!--main file css-->
     <link rel="stylesheet" href="{{asset('assests/front/css/all.min.css')}}">
     <link rel="stylesheet" href="{{asset('assests/front/css/style.css')}}">
-    <title>مكتبتى</title>
+    <title>Library</title>
 </head>
 
 <body>

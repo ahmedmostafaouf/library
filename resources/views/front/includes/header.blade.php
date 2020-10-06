@@ -7,8 +7,8 @@
             <!--row of top-bar-->
             <div class="d-flex justify-content-between">
                 <div>
-                    <a href="index.html" class="ar px-1">عربى</a>
-                    <a href="" class="en px-1">EN</a>
+                    <a href="index.html" class="ar px-1">En</a>
+                    <a href="" class="en px-1">عربي</a>
                 </div>
                 <div>
                     <ul class="list-unstyled">
@@ -27,16 +27,15 @@
                     <div class="dropdown">
                         <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">
-                            <span> مرحبا بك </span> &nbsp; &nbsp;{{auth('web')->user()->name}}
+                            <span> Welcome  </span> &nbsp; &nbsp;{{auth('web')->user()->name}}
                         </a>
                         <div class="dropdown-menu text-right" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="{{route('client-home')}}"> <i class="fas fa-home ml-2"></i>الرئيسيه</a>
-                            <a class="dropdown-item" href="{{route('get.student.profile')}}"> <i class="fas fa-user-alt ml-2"></i>معلوماتى</a>
-                            <a class="dropdown-item" href="{{route('student-borrow-request')}}"> <i class="far fa-heart ml-2"></i>الكتب المستعارة</a>
-                            <a class="dropdown-item" href="{{route('get.student.EditPass')}}"> <i class="far fa-comments ml-2"></i>تعديل كلمة السر</a>
-                            <a class="dropdown-item" href="{{route('contact.me')}}"> <i class="fas fa-phone ml-2"></i>تواصل
-                                معنا</a>
-                            <a class="dropdown-item" href="{{route('client-logout')}}"> <i class="fas fa-sign-out-alt ml-2"></i>خروج</a>
+                            <a class="dropdown-item" href="{{route('client-home')}}"> <i class="fas fa-home ml-2"></i>Home</a>
+                            <a class="dropdown-item" href="{{route('get.student.profile')}}"> <i class="fas fa-user-alt ml-2"></i>Profile</a>
+                            <a class="dropdown-item" href="{{route('student-borrow-request')}}"> <i class="far fa-heart ml-2"></i>Borrow Books</a>
+                            <a class="dropdown-item" href="{{route('get.student.EditPass')}}"> <i class="far fa-comments ml-2"></i>Edit password</a>
+                            <a class="dropdown-item" href="{{route('contact.me')}}"> <i class="fas fa-phone ml-2"></i>Contact Us</a>
+                            <a class="dropdown-item" href="{{route('client-logout')}}"> <i class="fas fa-sign-out-alt ml-2"></i>LogOut</a>
                         </div>
                     </div>
                 </div>
@@ -50,6 +49,7 @@
     <!--navbar-->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
+            <a class="navbar-brand" href="#"><img src="{{asset('assests/front/imgs/logo7.png')}}" style="width: 122px;height: 70px" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -57,24 +57,24 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{route('client-home')}}">الرئيسيه <span class="sr-only">(current)</span></a>
-                    </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('books')}}">الكتب</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('student-borrow-request')}}">طلبات الأستعارة</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('about.us')}}">من نحن</a>
+                        <a class="nav-link" href="{{route('about.us')}}">About us</a>
                     </li>
                     <li class="nav-item cont">
-                        <a class="nav-link" href="{{route('contact.me')}}">اتصل بنا</a>
+                        <a class="nav-link" href="{{route('contact.me')}}">Contact Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('student-borrow-request')}}">Borrow Requests</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('books')}}">Books</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{route('client-home')}}">Home <span class="sr-only">(current)</span></a>
                     </li>
                     @if(!auth()->guard('web')->check())
-                    <li class="mr-lg-auto"><a class="signin" href="{{route('get.front.register')}}">انشاء حساب جديد</a></li>
-                    <li class="pr-3"><a class="btn bg" href="{{route('get.front.login')}}"> الدخول </a></li>
+                    <li class="mr-lg-auto"><a class="signin" href="{{route('get.front.register')}}">New Account</a></li>
+                    <li class="pr-3"><a class="btn bg" href="{{route('get.front.login')}}"> Login </a></li>
                     @endif
                 </ul>
             </div>

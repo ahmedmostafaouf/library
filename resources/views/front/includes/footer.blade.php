@@ -5,21 +5,23 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4  offset-1">
-                    <h5 class="my-3" style="color: #da1c23">المكتبة</h5>
-                    <p class="pl-4">المكتبه الدوليه للكتب تساعدنا علي معرفه الكتب في المكتبه وعمل استعاره عن طريق الانترنت
+                    <div><img src="{{asset('assests/front/imgs/logo4.png')}}" style="width: 173px;height: 87px"> </div>
+
+                    <h5 class="my-3" style="color: #da1c23">the library</h5>
+                    <p class="pl-4">The International Library of Books helps us to know the books in the library and make borrowings through the Internet
                     </p>
                 </div>
                 <div class="col-md-3">
-                    <h6 class="">الرئيسية</h6>
+                    <h6 class="">Home</h6>
                     <ul class="list-unstyled">
-                        <li class="py-2"><a href="{{route('books')}}">الكتب</a></li>
-                        <li class="py-2"><a href="{{route('student-borrow-request')}}">عن الاستعارة</a></li>
-                        <li class="py-2"><a href="{{route('about.us')}}">من نحن</a></li>
-                        <li class="py-2"><a href="{{route('contact.me')}}">اتصل بنا</a></li>
+                        <li class="py-2"><a href="{{route('books')}}">Books</a></li>
+                        <li class="py-2"><a href="{{route('student-borrow-request')}}">About Borrows</a></li>
+                        <li class="py-2"><a href="{{route('about.us')}}">About us</a></li>
+                        <li class="py-2"><a href="{{route('contact.me')}}">Contact us</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 available">
-                    <h6 class="mb-5">متوفر على</h6>
+                    <h6 class="mb-5">Available on</h6>
                     <div class="my-3"><img src="{{asset('assests/front/imgs/google1.png')}}" alt=""></div>
                     <div class="my-3"><img src="{{asset('assests/front/imgs/ios1.png')}}" alt=""></div>
                 </div>
@@ -44,7 +46,7 @@
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <p class="text-center">جميع الحقوق محفوظه لـ <span>المكتبة</span> &copy; 2019</p>
+                    <p class="text-center">All rights reserved to <span>ITI</span> &copy; 2020</p>
                 </div>
             </div>
         </div>
