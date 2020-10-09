@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('logout' , 'App\Http\Controllers\Auth\LoginController@clientLogout')->name('client-logout');
+Route::get('logout' ,function (){
+    Auth::logout();
+    return redirect()->route('get.front.login');
+} )->name('client-logout');
 
 Route::group(['namespace'=>'App\Http\Controllers\Front','middleware'=>'auth:web'],function () {
     Route::get('booksDet', 'MainController@books')->name('books');
@@ -44,6 +48,6 @@ Route::group(['namespace'=>'App\Http\Controllers\Front'],function (){
 
 
 });
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+/*Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
-})->name('dashboard');
+})->name('dashboard');*/

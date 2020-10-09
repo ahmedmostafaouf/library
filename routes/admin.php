@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/ssss', function () {
     return view('welcome');
 });
+///////////////////////////////////////////Logout Admin ///////////////////////////////////////////
+Route::get('logout' ,function (){
+    Auth::guard('admin')->logout();
+    return redirect()->route('get.admin.login');
+} )->name('admin-logout');
+/////////////////////////////////////////End logout//////////////////////////////////////////////
+
 Route::group(['namespace'=>'App\Http\Controllers\Admin','middleware'=>'auth:admin','name'=>'.dashboard'],function () {
     Route::group(['prefix'=>'dashboard'],function () {
         Route::get('/', 'DashboardController@index')->name('dashboard.index');
