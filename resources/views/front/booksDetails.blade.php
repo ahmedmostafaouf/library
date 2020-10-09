@@ -17,10 +17,9 @@
             <div class="article-img m-auto">
                 <img src="{{$books->photo}}" class="card-img-top" alt="article-img">
             </div>
-            <div class="article-content my-4">
-                <div class="article-header p-2 d-flex justify-content-between">
+            <div class="article-content my-4 text-left">
+                <div class="text-left article-header p-2 d-inline-block-flex justify-content-between">
                     <h6>{{$books->title}}</h6>
-                    <a href=""><i class="far fa-heart"></i></a>
                 </div>
                 <div class="article-details p-4">
                     <p class="my-md-4">{{$books->description}}
@@ -54,9 +53,9 @@
                         <div class="card">
                             <img src="{{$book->photo}}" class="card-img-top" alt="slick-img" style="width:330px;height: 200px;">
                             <div class="heart-icon"><a href="{{route('borrow-request',$book->id)}}"><i id="{{$book->id}}" class="fas fa-heart"></i></a></div>
-                            <div class="card-body">
-                                <h5 class="card-title">{{$book->title}}</h5>
-                                <p>{{mb_substr($book ->description,0,20)}} ......
+                            <div class="card-body text-left">
+                                <h5 class="card-title ">{{$book->title}}</h5>
+                                <p> ...... {{mb_substr($book ->description,0,20)}}
                                 </p>
                                 <div class="text-center"><a href="{{route('details-books',$book->id)}}" class="btn bg px-5">Details</a></div>
                             </div>

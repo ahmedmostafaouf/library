@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 28, 2020 at 09:16 PM
+-- Generation Time: Oct 09, 2020 at 07:14 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.6
 
@@ -66,11 +66,12 @@ CREATE TABLE `books` (
 --
 
 INSERT INTO `books` (`id`, `category_id`, `name`, `title`, `description`, `photo`, `found`, `created_at`, `updated_at`) VALUES
-(9, 6, '2lf lela w lela', 'energy good book', '2lf lela w lela 2lf lela w lela 2lf lela w lela', '1601225810.png', 1, '2020-09-27 14:56:50', '2020-09-27 23:00:00'),
-(10, 6, 'C++ programing', 'good Book Programming', 'good Book Programming good Book Programming good Book Programming', '1601230433.png', 0, '2020-09-27 16:13:53', '2020-09-28 10:18:28'),
-(11, 6, 'scince', 'biology book', 'biology book biology book biology book biology book', '1601249996.jpg', 0, '2020-09-27 21:39:56', '2020-09-28 10:18:25'),
-(12, 6, 'CSS programing', 'CSS programing Book', 'CSS programing CSS programing CSS programing', '1601250058.jpg', 0, '2020-09-27 21:40:58', '2020-09-28 10:18:27'),
-(13, 6, 'warning', 'Warning Book', 'Warning BookWarning BookWarning BookWarning BookWarning BookWarning BookWarning Book', '1601296898.png', 1, '2020-09-28 10:41:38', '2020-09-28 14:17:53');
+(9, 6, '2lf lela w lela', 'Environment', '2lf lela w lela 2lf lela w lela 2lf lela w lela', '1601225810.png', 0, '2020-09-27 14:56:50', '2020-10-07 14:36:18'),
+(10, 6, 'C++ programing', 'C++ programing Book', 'good Book Programming good Book Programming good Book Programming', '1601230433.png', 1, '2020-09-27 16:13:53', '2020-10-06 14:43:17'),
+(11, 6, 'scince', 'biology book', 'biology book biology book biology book biology book', '1601249996.jpg', 0, '2020-09-27 21:39:56', '2020-10-07 16:00:26'),
+(12, 6, 'CSS programing', 'CSS programing Book', 'CSS programing CSS programing CSS programing', '1601250058.jpg', 1, '2020-09-27 21:40:58', '2020-10-07 15:55:36'),
+(13, 6, 'warning', 'Warning Book', 'Warning BookWarning BookWarning BookWarning BookWarning BookWarning BookWarning Book', '1601296898.png', 0, '2020-09-28 10:41:38', '2020-10-07 16:22:07'),
+(15, 7, 'HTML', 'good Book Programming', 'good Book Programming good Book Programming good Book Programming good Book Programming', '1601724354.png', 1, '2020-10-03 09:25:54', '2020-10-07 15:55:43');
 
 -- --------------------------------------------------------
 
@@ -82,7 +83,6 @@ CREATE TABLE `borrow_requests` (
   `id` int(10) UNSIGNED NOT NULL,
   `user_id` int(10) UNSIGNED NOT NULL,
   `book_id` int(10) UNSIGNED NOT NULL,
-  `number_of_days` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `book_name` varchar(225) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_name` varchar(225) COLLATE utf8mb4_unicode_ci NOT NULL,
   `Too` date NOT NULL,
@@ -95,12 +95,12 @@ CREATE TABLE `borrow_requests` (
 -- Dumping data for table `borrow_requests`
 --
 
-INSERT INTO `borrow_requests` (`id`, `user_id`, `book_id`, `number_of_days`, `book_name`, `user_name`, `Too`, `status`, `created_at`, `updated_at`) VALUES
-(13, 2, 11, '5', 'scince', 'Ahmed Mostafa', '2020-10-06', 1, '2020-09-28 10:07:09', '2020-09-28 10:18:19'),
-(14, 2, 12, '3', 'CSS programing', 'Ahmed Mostafa', '2020-09-29', 1, '2020-09-28 10:08:54', '2020-09-28 10:18:21'),
-(15, 2, 10, '3', 'C++ programing', 'Ahmed Mostafa', '2020-09-30', 1, '2020-09-28 10:11:40', '2020-09-28 10:18:23'),
-(16, 2, 13, '5', 'warning', 'Ahmed Mostafa', '2020-10-06', 0, '2020-09-28 10:42:13', '2020-09-28 14:17:49'),
-(17, 3, 13, '3', 'warning', 'Ahmed Elgamal', '2020-09-30', 0, '2020-09-28 15:41:21', '2020-09-28 15:41:21');
+INSERT INTO `borrow_requests` (`id`, `user_id`, `book_id`, `book_name`, `user_name`, `Too`, `status`, `created_at`, `updated_at`) VALUES
+(13, 2, 11, 'scince', 'Ahmed Mostafa', '2020-10-06', 0, '2020-09-28 10:07:09', '2020-10-07 15:55:26'),
+(14, 2, 12, 'CSS programing', 'Ahmed Mostafa', '2020-09-29', 1, '2020-09-28 10:08:54', '2020-10-07 15:55:33'),
+(21, 2, 15, 'HTML', 'Ahmed Sasa', '2020-10-07', 0, '2020-10-05 14:19:27', '2020-10-07 15:55:48'),
+(24, 3, 9, '2lf lela w lela', 'Ahmed Elgamal', '2020-10-10', 1, '2020-10-07 14:36:03', '2020-10-07 14:36:15'),
+(26, 11, 13, 'warning', 'Eng Ahmed', '2020-10-10', 1, '2020-10-07 16:21:36', '2020-10-07 16:22:04');
 
 -- --------------------------------------------------------
 
@@ -120,7 +120,8 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `name`, `created_at`, `updated_at`) VALUES
-(6, 'stories', '2020-09-27 14:53:16', '2020-09-27 14:53:16');
+(6, 'stories', '2020-09-27 14:53:16', '2020-09-27 14:53:16'),
+(7, 'programming', '2020-10-03 09:23:53', '2020-10-03 09:23:53');
 
 -- --------------------------------------------------------
 
@@ -218,20 +219,10 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('042nf4vPAqR5PnMlS0N5LeTAe5r1KxgUKohbCLMT', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63', 'YTo4OntzOjY6Il90b2tlbiI7czo0MDoic3NBUmQzM1hoaGFnUDRoT1VaY2hyN2N3MFNzZ1NJMmE2Rm5JQUlhYiI7czozOiJ1cmwiO2E6MTp7czo4OiJpbnRlbmRlZCI7czozNToiaHR0cDovLzEyNy4wLjAuMTo4MDAwL2JvcnJvd1JlcXVlc3QiO31zOjk6Il9wcmV2aW91cyI7YToxOntzOjM6InVybCI7czozNzoiaHR0cDovLzEyNy4wLjAuMTo4MDAwL2FkbWluL2Rhc2hib2FyZCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjM7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRjMWxxOXRBa0hGaVRFUzNON2dYbnR1c0ZWWjNUS2dNZDVFbm9PaUdwQ29nSnAvUzBZYkF5NiI7czo1MjoibG9naW5fYWRtaW5fNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO3M6MTk6InBhc3N3b3JkX2hhc2hfYWRtaW4iO3M6NjA6IiQyeSQxMCQ2NFZWSUNqQ2NOMXZlRWhQdWtzR09lcXBZWDAuRVhCM3hPMVRlNXd5ZHJMbGcuOUdOVnB6NiI7fQ==', 1601315593),
-('1HveEBcrwyhcDa1HODf0WnAv1lCYsrNRhDwg23Hb', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63', 'YToyOntzOjY6Il90b2tlbiI7czo0MDoiMzBmN2xWa0M4Y2ptY3ZyelA0VGN6U3ZMeUhFdElZUHprTHZLM0VEdiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1601316647),
-('4O0xStatyLmE8Ixfs7VMWm9QbKbewO9fP9uwuLow', 3, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63', 'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiTDVQMlg3VEhWblQ5MWlsdzNOVlBCcXNlZldwSXlIUE1zTjZCYVlmbiI7czozOiJ1cmwiO2E6MTp7czo4OiJpbnRlbmRlZCI7czozNzoiaHR0cDovLzEyNy4wLjAuMTo4MDAwL2FkbWluL2Rhc2hib2FyZCI7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjI2OiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvaG9tZSI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTI6ImxvZ2luX2FkbWluXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aTozO3M6MTc6InBhc3N3b3JkX2hhc2hfd2ViIjtzOjYwOiIkMnkkMTAkYzFscTl0QWtIRmlURVMzTjdnWG50dXNGVlozVEtnTWQ1RW5vT2lHcENvZ0pwL1MwWWJBeTYiO30=', 1601319909),
-('bG9kxPDutUmhjUgycHAYCsG8Hos7xyLb2Sr7LaMv', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63', 'YToyOntzOjY6Il90b2tlbiI7czo0MDoiRHNERk51MVQ4N0xac0pGczF0amxNdzVNbEs1T1lRck9vZDNZUXBiNyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1601316642),
-('D6IqZnwOiAyajyNnaUybvNafH5pHh0d9L1hmtn2O', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63', 'YTo4OntzOjY6Il90b2tlbiI7czo0MDoiOFp3cW43c1pTalIzU1ZYUnZ5ckM3UDNPN2RNRWVUMUxYMHdnMGFKTiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mzc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9hZG1pbi9kYXNoYm9hcmQiO31zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToyO3M6MTc6InBhc3N3b3JkX2hhc2hfd2ViIjtzOjYwOiIkMnkkMTAkbEtraTY3TTNjWGtCR25DcHp2LjNIZXUyQ3NDcUpRejhmSG9JOW9FTnJmZUdUNWd6RWZuOWkiO3M6MzoidXJsIjthOjE6e3M6ODoiaW50ZW5kZWQiO3M6NDU6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9hZG1pbi9kYXNoYm9hcmQvc3R1ZGVudCI7fXM6NTI6ImxvZ2luX2FkbWluXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjE5OiJwYXNzd29yZF9oYXNoX2FkbWluIjtzOjYwOiIkMnkkMTAkNjRWVklDakNjTjF2ZUVoUHVrc0dPZXFwWVgwLkVYQjN4TzFUZTV3eWRyTGxnLjlHTlZwejYiO30=', 1601312541),
-('DI87RGa7gd6ReQKqzFS5qxPWamaXoUoEm9RAmj1d', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiSVJpRmRlWk9zcDNRZkc3WUJYV1BIcHNKU1lLRFhibGRjOGVUNXFZYSI7czozOiJ1cmwiO2E6MTp7czo4OiJpbnRlbmRlZCI7czozNzoiaHR0cDovLzEyNy4wLjAuMTo4MDAwL2FkbWluL2Rhc2hib2FyZCI7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjM3OiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYWRtaW4vZGFzaGJvYXJkIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MjoibG9naW5fYWRtaW5fNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=', 1601315900),
-('eFFzEXtaOx0uHZOA5yxUSD39gu4smOY8ub08TKoY', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiS1Q3ZEJxbmU3MVoxV0NvajZVRGdrYWtYYUx2TEl6SVNIbmZXRFFHaCI7czozOiJ1cmwiO2E6MTp7czo4OiJpbnRlbmRlZCI7czozNzoiaHR0cDovLzEyNy4wLjAuMTo4MDAwL2FkbWluL2Rhc2hib2FyZCI7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjM3OiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYWRtaW4vZGFzaGJvYXJkIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MjoibG9naW5fYWRtaW5fNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=', 1601316211),
-('IJTfUj9lY7aSgiGsSNK6uUFqPOxmh0y10RmDZ9in', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63', 'YToyOntzOjY6Il90b2tlbiI7czo0MDoiQjNSZ2NqNjhuaGlKcEQ5emc2ZTBoRnNqdlB1SjZpMzlTZmhyNTFtZiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1601316242),
-('M2J9sdQ3U8IqmIiL1bPSeQbIZkWRo6XFqoyIq6ak', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiRmgzbUZyUnFPdXVKVnBCMmFVZ2VET3BaTHE0YmpudGdzeXMxelU0VyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mzc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9hZG1pbi9kYXNoYm9hcmQiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUyOiJsb2dpbl9hZG1pbl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7fQ==', 1601316898),
-('Mg1vFbk4B9MfXsnlVlGjPHuAWcHkdGUZofdjjzSj', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoia2tMcDNzcjg2UUhzdUJUWHVKNHQySWE4WUNGQ1hiQ05Pd29ZbG5pZSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzM6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9hZG1pbi9sb2dpbiI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTI6ImxvZ2luX2FkbWluXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9', 1601316260),
-('pHYkckw200MwbESOjVl1LlTKGF3012xLe0fizlUa', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoibms5VmNURzlwbUQyWklnVlBybkJiNGJnVXpzUzhka0ZrNUtLalByTCI7czozOiJ1cmwiO2E6MTp7czo4OiJpbnRlbmRlZCI7czozNzoiaHR0cDovLzEyNy4wLjAuMTo4MDAwL2FkbWluL2Rhc2hib2FyZCI7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjM3OiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYWRtaW4vZGFzaGJvYXJkIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MjoibG9naW5fYWRtaW5fNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=', 1601315845),
-('RFk7ShCPTOpIrHOwnnTJS4izT7ZNw8BeHGyrWxw2', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiaVZIc3BSYkhycndMbkVRZHhtNTVoN2d4cjM4Rmo3Vkh6OFpvOXdURSI7czozOiJ1cmwiO2E6MTp7czo4OiJpbnRlbmRlZCI7czozNzoiaHR0cDovLzEyNy4wLjAuMTo4MDAwL2FkbWluL2Rhc2hib2FyZCI7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjM3OiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYWRtaW4vZGFzaGJvYXJkIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MjoibG9naW5fYWRtaW5fNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=', 1601316050),
-('TNmviZCpHOJimoPx2DE3g0p90tri5MdphTKW4z7i', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoib0xicjV2UjBZN1l6TEFIUEx5bnJ3S2t6WE1DWnFzRjREU29zMDFMNyI7czozOiJ1cmwiO2E6MTp7czo4OiJpbnRlbmRlZCI7czozNzoiaHR0cDovLzEyNy4wLjAuMTo4MDAwL2FkbWluL2Rhc2hib2FyZCI7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjMzOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYWRtaW4vbG9naW4iO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUyOiJsb2dpbl9hZG1pbl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7fQ==', 1601316239),
-('tWCUG6lGPH11oJs1JR3ISlFEzizHGO5eQzfY2bMq', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63', 'YToyOntzOjY6Il90b2tlbiI7czo0MDoiZFMwS0VrRG0zYzFNbHdpdlFPeVBIYWVFZ094a3JpY09ZVFI2bnEyRiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1601316249);
+('iHKTwKfj00gtBau1REZeEEWzg04YYNj6n2UnGSXe', 11, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.68', 'YTo4OntzOjY6Il90b2tlbiI7czo0MDoiR3FmT2hOYTRJSTVnSER1MjdPdldjVTQ2UXRmRXhGcFdHaU5uNkp2TyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzM6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9nZXRFZGl0UGFzcyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6MzoidXJsIjthOjE6e3M6ODoiaW50ZW5kZWQiO3M6MzY6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9kZXRhaWxzQm9vay8xMyI7fXM6NTI6ImxvZ2luX2FkbWluXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxMTtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJFZjNktIOXoyNjlPRVUwYUx3cGlNYmU2VE1wcjQ0dFdLU3cyaWxQdFl3TkpQT0p2QVlBRW1DIjtzOjE5OiJwYXNzd29yZF9oYXNoX2FkbWluIjtzOjYwOiIkMnkkMTAkNjRWVklDakNjTjF2ZUVoUHVrc0dPZXFwWVgwLkVYQjN4TzFUZTV3eWRyTGxnLjlHTlZwejYiO30=', 1602094976),
+('k62nc7v4tv9XQiTTb5I7hhQCSl1hElpPmplAmQHV', 9, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.68', 'YTo4OntzOjY6Il90b2tlbiI7czo0MDoiVFBNY2J5Q1BtdWNPS2FSRlVJQmNNYzduNVQ4ZFZzcUUyTk1lcmxDTCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzA6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9hYm91dC11cyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6MzoidXJsIjthOjE6e3M6ODoiaW50ZW5kZWQiO3M6MzY6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9kZXRhaWxzQm9vay8xMCI7fXM6NTI6ImxvZ2luX2FkbWluXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aTo5O3M6MTc6InBhc3N3b3JkX2hhc2hfd2ViIjtzOjYwOiIkMnkkMTAkd21oY0dzcEE3QmJ5M3U1SjN6LlhtT2RRVXJINnNocjE1NlVFY3ZhU1pPMEFvN2licnB0RzIiO3M6MTk6InBhc3N3b3JkX2hhc2hfYWRtaW4iO3M6NjA6IiQyeSQxMCQ2NFZWSUNqQ2NOMXZlRWhQdWtzR09lcXBZWDAuRVhCM3hPMVRlNXd5ZHJMbGcuOUdOVnB6NiI7fQ==', 1602093647),
+('mG1zIflr8O2WE6bQnJC9a8XBQfvm8tpir9bQyzxg', 3, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.68', 'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiM3BBSksxRGpHTDlkNTN6dFgzSjd2a1lYMFhIenNuQ1VVdWJGTjd5bSI7czozOiJ1cmwiO2E6MTp7czo4OiJpbnRlbmRlZCI7czozMDoiaHR0cDovLzEyNy4wLjAuMTo4MDAwL2Jvb2tzRGV0Ijt9czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzA6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9ib29rc0RldCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjM7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRjMWxxOXRBa0hGaVRFUzNON2dYbnR1c0ZWWjNUS2dNZDVFbm9PaUdwQ29nSnAvUzBZYkF5NiI7czo1MjoibG9naW5fYWRtaW5fNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=', 1602088493),
+('zJSDdq3ZWAbcrtjD0yNtNhPxQklF5DOia02YzQLc', 3, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.68', 'YTo4OntzOjY6Il90b2tlbiI7czo0MDoiVWNhSXJOWWs3UFVkcVRmSjlWNGVGcjFEMmh5eXJGVjJwcTNZdWxWRCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czozOiJ1cmwiO2E6MTp7czo4OiJpbnRlbmRlZCI7czozNzoiaHR0cDovLzEyNy4wLjAuMTo4MDAwL2JvcnJvd1JlcXVlc3QvOSI7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjI2OiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvaG9tZSI7fXM6NTI6ImxvZ2luX2FkbWluXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aTozO3M6MTc6InBhc3N3b3JkX2hhc2hfd2ViIjtzOjYwOiIkMnkkMTAkYzFscTl0QWtIRmlURVMzTjdnWG50dXNGVlozVEtnTWQ1RW5vT2lHcENvZ0pwL1MwWWJBeTYiO3M6MTk6InBhc3N3b3JkX2hhc2hfYWRtaW4iO3M6NjA6IiQyeSQxMCQ2NFZWSUNqQ2NOMXZlRWhQdWtzR09lcXBZWDAuRVhCM3hPMVRlNXd5ZHJMbGcuOUdOVnB6NiI7fQ==', 1602088667);
 
 -- --------------------------------------------------------
 
@@ -264,7 +255,9 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `photo`, `address`, `dop`, `phone`, `remember_token`, `current_team_id`, `profile_photo_path`, `created_at`, `updated_at`) VALUES
 (2, 'Ahmed Sasa', 'ahmed_sasa@gmail.com', NULL, '$2y$10$lKki67M3cXkBGnCpzv.3Heu2CsCqJQz8fHoI9oENrfeGT5gzEfn9i', NULL, NULL, 'Ahmed Mostafa', 'Mansoura', '1999-07-10', '01066273085', NULL, NULL, NULL, '2020-09-27 15:00:33', '2020-09-28 11:31:57'),
-(3, 'Ahmed Elgamal', 'elgamal@yahoo.com', NULL, '$2y$10$c1lq9tAkHFiTES3N7gXntusFVZ3TKgMd5EnoOiGpCogJp/S0YbAy6', NULL, NULL, NULL, 'Mansoura', '1999-07-10', '01066273088', NULL, NULL, NULL, '2020-09-28 15:39:49', '2020-09-28 15:39:49');
+(3, 'Ahmed Elgamal', 'elgamal@yahoo.com', NULL, '$2y$10$c1lq9tAkHFiTES3N7gXntusFVZ3TKgMd5EnoOiGpCogJp/S0YbAy6', NULL, NULL, NULL, 'Mansoura', '1999-07-10', '01066273088', NULL, NULL, NULL, '2020-09-28 15:39:49', '2020-09-28 15:39:49'),
+(4, 'Ahmed Mostafaa', 'ahmed22@gmail.com', NULL, '$2y$10$pWXBu78lqFP2UmgARb4z1egcWSyQco9WjBz1gGVWHvI2OU0Crco8O', NULL, NULL, NULL, 'Mansoura', '2020-09-30', '01066273099', NULL, NULL, NULL, '2020-10-03 09:30:11', '2020-10-03 09:30:11'),
+(11, 'Eng Ahmed', 'ahmed23212@gmail.com', NULL, '$2y$10$Vc6KH9z269OEU0aLwpiMbe6TMpr44tWKSw2ilPtYwNJPOJvAYAEmC', NULL, NULL, NULL, 'Mansoura', '1998-07-10', '01013690945', NULL, NULL, NULL, '2020-10-07 16:19:13', '2020-10-07 16:22:55');
 
 --
 -- Indexes for dumped tables
@@ -354,19 +347,19 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `books`
 --
 ALTER TABLE `books`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `borrow_requests`
 --
 ALTER TABLE `borrow_requests`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -390,7 +383,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Constraints for dumped tables

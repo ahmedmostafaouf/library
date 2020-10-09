@@ -30,7 +30,7 @@
             </div>
             <div class="form-group">
                 <label>Book Name</label>
-                <input type="text"  disabled name="books_name" value="{{$books->name}}" class="form-control my-3" placeholder="book Name">
+                <input type="text"  disabled name="books_name" value="{{$books->name}}" class="form-control my-3 text-left" placeholder="book Name">
                 @error("book_name")
                 <span class="text-danger">{{$message}} </span>
                 @enderror
@@ -38,15 +38,15 @@
             <div class="form-group">
                 <div class="form-group">
                     <label>Student Name</label>
-                    <input type="text"  id="datepicker" disabled name="user_name" value="{{auth()->user()->name}}" class="form-control" placeholder="Student name">
+                    <input type="text"  id="datepicker" disabled name="user_name" value="{{auth()->user()->name}}" class="form-control text-left" placeholder="Student name">
                 </div>
             </div>
             <div class="form-group">
                 <label>Phone</label>
-                <input type="text" name="phone" value="{{auth()->user()->phone}}" disabled class="form-control " placeholder="Phone">
+                <input type="text" name="phone" value="{{auth()->user()->phone}}" disabled class="form-control text-left " placeholder="Phone">
             </div>
                 <label>Address</label>
-                <input type="text" disabled id="datepicker" name="address" value="{{auth()->user()->address}}" class="form-control" placeholder="Address">
+                <input type="text" disabled id="datepicker" name="address" value="{{auth()->user()->address}}" class="form-control text-left" placeholder="Address">
                 @error("address")
                 <span class="text-danger">{{$message}} </span>
                 @enderror

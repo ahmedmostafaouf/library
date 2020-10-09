@@ -42,9 +42,9 @@
                             </div>
                             <img src="{{$book->photo}}" class="card-img-top" alt="slick-img" style="width:330px;height: 200px; ">
 
-                            <div class="card-body">
+                            <div class="card-body text-left">
                                 <h5 class="card-title">{{$book->title}}</h5>
-                                <p>{{ mb_substr($book ->description,0,20)}} ......
+                                <p> ...... {{ mb_substr($book ->description,0,20)}}
                                 </p>
                                 <div class="text-center"><a href="{{route('details-books',$book->id)}}" class="btn bg px-5">Details</a>
                                 </div>

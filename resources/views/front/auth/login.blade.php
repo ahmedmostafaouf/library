@@ -15,11 +15,11 @@
         <div class="text-center"><img src="{{asset('assests/front/imgs/logo6.png')}}"> </div>
         <form action="" class="w-75 mx-auto my-5" method="POST">
             @csrf
-            <input type="text" name="phone" class="form-control my-3 py-3" id="usName" placeholder="Phone">
+            <input type="text" name="phone" class="form-control my-3 py-3 text-left" id="phone" placeholder="Phone">
             @error('phone')
             <span class="text-danger">{{$message}}</span>
             @enderror
-            <input type="password" name="password" class="form-control my-3 py-3" id="usPassword" placeholder="Password">
+            <input type="password" name="password" class="form-control my-3 py-3 text-left" id="usPassword" placeholder="Password">
             @error('password')
             <span class="text-danger">{{$message}}</span>
             @enderror

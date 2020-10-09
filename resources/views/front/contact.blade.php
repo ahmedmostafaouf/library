@@ -42,16 +42,16 @@
                                 @csrf
                                 @include('admin.include.alerts.errors')
                                 @include('admin.include.alerts.success')
-                                <input type="text"  value="{{request()->user()->name}}" class="form-control my-3 " disabled>
-                                <input type="mail"  value="{{request()->user()->email}}" class="form-control my-3" disabled>
-                                <input type="text"  value="{{request()->user()->phone}}" class="form-control my-3" disabled>
-                                <input type="text" name="subject" class="form-control my-3" placeholder="Title">
+                                <input type="text"  value="{{request()->user()->name}}" class="form-control my-3 text-left " disabled>
+                                <input type="mail"  value="{{request()->user()->email}}" class="form-control my-3 text-left" disabled>
+                                <input type="text"  value="{{request()->user()->phone}}" class="form-control my-3 text-left" disabled>
+                                <input type="text" name="subject" class="form-control my-3 text-left" placeholder="Title">
                                 <div class="form-group">
                                 @error("subject")
                                 <span class="text-danger">{{$message}} </span>
                                 @enderror
                                 </div>
-                                <textarea name="message" class="form-control my-4" rows="5" placeholder="Text Message"></textarea>
+                                <textarea name="message" class="form-control my-4 text-left" rows="5" placeholder="Text Message"></textarea>
                                 <div class="form-group">
                                 @error("message")
                                 <span class="text-danger">{{$message}} </span>

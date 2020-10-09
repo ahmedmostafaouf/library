@@ -7,8 +7,8 @@
                 <div class="col-md-4  offset-1">
                     <div><img src="{{asset('assests/front/imgs/logo4.png')}}" style="width: 173px;height: 87px"> </div>
 
-                    <h5 class="my-3" style="color: #da1c23">the library</h5>
-                    <p class="pl-4">The International Library of Books helps us to know the books in the library and make borrowings through the Internet
+                    <h5 class="my-3 arrow text-center" style="color: #da1c23"><b>the library</b></h5>
+                    <p class="pl-4 arrow text-left">The International Library of Books helps us to know the books in the library and make borrowings through the Internet
                     </p>
                 </div>
                 <div class="col-md-3">

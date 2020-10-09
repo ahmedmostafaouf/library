@@ -29,13 +29,13 @@
                            aria-haspopup="true" aria-expanded="false">
                             <span> Welcome  </span> &nbsp; &nbsp;{{auth('web')->user()->name}}
                         </a>
-                        <div class="dropdown-menu text-right" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="{{route('client-home')}}"> <i class="fas fa-home ml-2"></i>Home</a>
-                            <a class="dropdown-item" href="{{route('get.student.profile')}}"> <i class="fas fa-user-alt ml-2"></i>Profile</a>
-                            <a class="dropdown-item" href="{{route('student-borrow-request')}}"> <i class="far fa-heart ml-2"></i>Borrow Books</a>
-                            <a class="dropdown-item" href="{{route('get.student.EditPass')}}"> <i class="far fa-comments ml-2"></i>Edit password</a>
-                            <a class="dropdown-item" href="{{route('contact.me')}}"> <i class="fas fa-phone ml-2"></i>Contact Us</a>
-                            <a class="dropdown-item" href="{{route('client-logout')}}"> <i class="fas fa-sign-out-alt ml-2"></i>LogOut</a>
+                        <div class="dropdown-menu text-left" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="{{route('client-home')}}"> Home <i class="fas fa-home ml-2"></i></a>
+                            <a class="dropdown-item" href="{{route('get.student.profile')}}"> Profile  <i class="fas fa-user-alt ml-2"></i></a>
+                            <a class="dropdown-item" href="{{route('student-borrow-request')}}"> Borrow Books  <i class="far fa-heart ml-2"></i></a>
+                            <a class="dropdown-item" href="{{route('get.student.EditPass')}}"> Edit password  <i class="far fa-comments ml-2"></i></a>
+                            <a class="dropdown-item" href="{{route('contact.me')}}"> Contact Us  <i class="fas fa-phone ml-2"></i></a>
+                            <a class="dropdown-item" href="{{route('client-logout')}}"> LogOut  <i class="fas fa-sign-out-alt ml-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -49,7 +49,7 @@
     <!--navbar-->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="{{asset('assests/front/imgs/logo7.png')}}" style="width: 122px;height: 70px" alt=""></a>
+            <a class="navbar-brand" href="{{route('client-home')}}"><img src="{{asset('assests/front/imgs/logo7.png')}}" style="width: 122px;height: 70px" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">

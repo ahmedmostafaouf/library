@@ -20,21 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e061d131-baae-4a8a-91cc-6906e89a75ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assests/front/imgs/logo2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assests/front/imgs/logo4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assests/front/imgs/logo6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assests/front/imgs/logo7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assests/images/books/1601724354.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Me/Library (2).xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Me/Library.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Me/Library.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Me/libraryMabing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Me/libraryMaping.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/BorrowRequestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/BorrowRequestController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Front/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Front/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/BorrowRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/BorrowRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_26_223520_create_borrow_requests_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_26_223520_create_borrow_requests_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/book/showStudentReq.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/book/showStudentReq.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/borrow/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/borrow/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Front/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Front/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databaseMe/blog.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Me/blog.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/front/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/about.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/front/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/books.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/books.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/auth/register.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/front/booksDetails.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/booksDetails.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/front/borrow.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/borrow.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/front/changePass.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/changePass.blade.php" afterDir="false" />
@@ -43,8 +39,6 @@
       <change beforePath="$PROJECT_DIR$/resources/views/front/includes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/includes/footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/front/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/includes/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/front/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/studentBorrowBook.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/studentBorrowBook.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,6 +238,7 @@
       <workItem from="1601330695798" duration="3019000" />
       <workItem from="1601723401501" duration="1069000" />
       <workItem from="1601900158405" duration="19715000" />
+      <workItem from="1601996948668" duration="9744000" />
     </task>
     <servers />
   </component>

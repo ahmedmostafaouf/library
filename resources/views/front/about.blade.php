@@ -14,19 +14,20 @@
             <div class="text-center"><img src="{{asset('assests/front/imgs/logo6.png')}}"> </div>
             <div class="about-US-content px-4 mb-5">
                 <p class="my-md-4 arrow text-left">
-                    The International Library of Books helps us to know the books in the library and make borrowings through the Internet
+                    <b> The International Library of Books helps us to know the books in the library and make borrowings through the Internet</b>
                 </p>
                 <p class="my-md-4 arrow text-left">
+                    <b>
                     The International Library of Books helps us to know the books in the library and make borrowings through the Internet
 
                     The International Library of Books helps us to know the books in the library and make borrowings through the Internet
 
                     The International Library of Books helps us to know the books in the library and make borrowings through the Internet
-
+                    </b>
 
                 </p>
                 <p class="my-md-4 arrow text-left">
-                    Al-Mustafa's team built the site in order to help some people easily borrow books from the library, prevent overcrowding while there, and also help to know if the book is available in the library or not. </p>
+                    <b>Al-Mustafa's team built the site in order to help some people easily borrow books from the library, prevent overcrowding while there, and also help to know if the book is available in the library or not.</b> </p>
             </div>
         </section><!--End about-us-->
     </div><!--End container-->
